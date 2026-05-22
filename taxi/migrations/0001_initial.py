@@ -18,17 +18,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Manufacturer",
+            name='Manufacturer',
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ('id', models.BigAutoField(...)),
+                ('name', models.CharField(...)),
+                ('home_country', models.CharField(...)),
+            ],
+        ),
                 ("name", models.CharField(max_length=255, unique=True)),
                 ("country", models.CharField(max_length=255)),
             ],
